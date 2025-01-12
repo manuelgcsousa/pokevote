@@ -13,7 +13,7 @@ This project was created as a way to learn and experiment with [htmx](https://ht
 - **SQLite**: Local database for storing Pokémon data.
     - **PokéAPI**: Source of Pokémon data.
 - **htmx**: Server-client communication is implemented using **htmx**, which enables partial page updates by sending HTTP requests to the server and dynamically replacing HTML fragments.
-    - Voting page + results page as an SPA.
+    - Voting page + results page as a SPA.
 
 ## Getting Started
 
