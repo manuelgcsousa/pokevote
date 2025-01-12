@@ -4,7 +4,8 @@ Pokévote is a web application where users can vote on their favourite Pokémon!
 
 This project was created as a way to learn and experiment with [htmx](https://htmx.org/) for handling server-client interactions in a web application.
 
-<img src="./resources/example.png"/>
+<img src="./resources/example_vote.png"/>
+<img src="./resources/example_results.png"/>
 
 ## Overview
 
