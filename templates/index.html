@@ -1,0 +1,42 @@
+{{ block "index" .}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+  <title>Pokévote</title>
+</head>
+<body>
+  <nav class="navbar has-background-link">
+    <div class="navbar-brand is-align-items-center">
+      <h1
+        hx-get="/pokemon"
+        hx-target="#content"
+        class="title is-4 has-text-warning pl-4"
+        style="cursor: pointer;"
+      >
+        Pokévote
+      </h1>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <a
+          hx-get="/results"
+          hx-target="#content"
+          class="button is-ghost has-text-white-bis pr-2"
+        >
+          Results
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div id="content">
+    {{ template "pokemon" . }}
+  </div>
+</body>
+</html>
+{{ end }}

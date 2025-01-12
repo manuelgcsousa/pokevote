@@ -1,0 +1,25 @@
+{{ block "pokemon" . }}
+<section class="hero is-medium">
+  <div class="hero-body">
+    <div id="pokemon-vote" class="container">
+      <form hx-post="/vote" hx-target="#content">
+        <div class="columns is-centered">
+          {{ range . }}
+            <div class="column is-narrow has-text-centered">
+              <img src="{{ .SpriteUrl }}" style="width: 256px; height: 256px; image-rendering: pixelated;">
+              <p>
+                <div>#{{ .DexId }}</div>
+                <div class="title is-4">{{ .Name }}</div>
+              </p>
+
+              <input type="hidden" name="pokemonIds" value="{{ .Id }}">
+
+              <button class="button" type="submit" name="voteId" value="{{ .Id }}">Vote</button>
+            </div>
+          {{ end }}
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+{{ end }}
